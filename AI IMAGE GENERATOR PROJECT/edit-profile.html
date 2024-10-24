@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Management</title>
+    <link rel="stylesheet" href="edit-profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="profile">Profile</button>
+            <button class="tab-button" data-tab="security">Security</button>
+            <button class="tab-button" data-tab="notifications">Notifications</button>
+        </div>
+
+        <div id="profile" class="tab-content active">
+            <div class="profile-header">
+                <h2 class="profile-title">Profile Information</h2>
+                <p class="profile-subtitle">Update your personal information and profile settings</p>
+            </div>
+
+            <form id="profile-form">
+                <div class="profile-photo">
+                    <img src="Profile images/user.png" alt="Profile photo" class="avatar" id="profile-image">
+                    <input type="file" id="photo-upload" hidden accept="image/*">
+                    <button type="button" class="photo-button" onclick="document.getElementById('photo-upload').click()">
+                        Change Photo
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" value="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="john.doe@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio">Software developer passionate about creating great user experiences.</textarea>
+                </div>
+
+                <button type="submit" class="button">Save Changes</button>
+            </form>
+        </div>
+
+        <div id="security" class="tab-content">
+            <div class="profile-header">
+                <h2 class="profile-title">Security Settings</h2>
+                <p class="profile-subtitle">Manage your password and security preferences</p>
+            </div>
+
+            <button class="button-outline">Change Password</button>
+            <button class="button-outline">Two-Factor Authentication</button>
+        </div>
+
+        <div id="notifications" class="tab-content">
+            <div class="profile-header">
+                <h2 class="profile-title">Notification Preferences</h2>
+                <p class="profile-subtitle">Choose how you want to receive notifications</p>
+            </div>
+
+            <button class="button-outline">Email Notifications</button>
+            <button class="button-outline">Push Notifications</button>
+        </div>
+    </div>
+
+ <script src="edit-profile.js"></script>
+</body>
+</html>
