@@ -1,0 +1,172 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 0 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    height: 40px;
+    width: auto;
+  }
+
+  .brand-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover:after {
+    width: 100%;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-login, .btn-signup {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-login {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-login:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-signup {
+    background: #fff;
+    color: #000;
+  }
+
+  .btn-signup:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .nav-menu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 2rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      margin-top: 1.5rem;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .navbar {
+      padding: 0 1rem;
+    }
+
+    .brand-text {
+      display: none;
+    }
+  }
+  .user-greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
